@@ -13,13 +13,10 @@ socket.on('msg', function(msg) {
     var nickname = msg['nickname'];
     var msg = msg['msg'];
 
-    var nicknameElt = document.createElement("strong");
-    nicknameElt.appendChild(document.createTextNode(nickname + ": "));
-
     var p = document.createElement("p");
     p.setAttribute("class", "fadein");
-    p.appendChild(nicknameElt);
-    p.appendChild(document.createTextNode(msg));
+    p.innerHTML = `<strong>${nickname}:</strong> ${msg}`;
+
     chatarea.appendChild(p);
 });
 
