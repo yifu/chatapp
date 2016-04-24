@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    style
+      include style.css
+    meta(charset="utf-8")
+    title chatdash
+  body
+    h1 chatdash
+    p
+      input(type='text', id='msg', value='type in your text right here please')
+      div(id='chatarea')
+    script(src='/socket.io/socket.io.js')
+    script(src='/static/client.js')
+  
